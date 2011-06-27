@@ -19,7 +19,7 @@ Ext.define('kasbon.panel.MainPanel', {
                     }, {
                         text : 'Logout',
                         handler: function(){
-                        	window.location = 'process/logout';
+                            window.location = 'process/logout';
                         }
                     } ]
                 }
@@ -29,21 +29,54 @@ Ext.define('kasbon.panel.MainPanel', {
                     xtype : 'menu',
                     plain : true,
                     items : [ {
-                        text : 'User', 
+                        text : 'Master User', 
                         scope : this,
                         handler : function(item){
                             Ext.getCmp('centerpanel').displayScreen(item.screenType);
                         },
                         screenType : 'kasbon.form.UserForm'
-                    } ]
+                    },
+                    {
+                        text : 'Master Pegawai'
+                    
+                    }]
                 }
             }, {
-                text : 'Transaction'
+                text : 'Transaction',
+                menu : {
+                    xtype : 'menu',
+                    plain : true,
+                    items : [ {
+                        text : 'Pengajuan Kasbon'                  
+                    },
+                    {
+                        text : 'Approval Kasbon'
+                    
+                    },{
+                        text : 'Pencairan Kasbon'                  
+                    },{
+                        text : 'Pelunasan Kasbon'                  
+                    }]
+                }
                 
                 
                 
             }, {
-                text : 'Report'
+                text : 'Report',
+                menu : {
+                    xtype : 'menu',
+                    plain : true,
+                    items : [ {
+                        text : 'Rekap Pengajuan Kasbon'
+                        
+                        },{
+                        text : 'Rekap Kasbon Per Pegawai'
+                    
+                    },{
+                        text : 'Rekap Kasbon Semua Pegawai'                  
+                    
+                    }]
+                }
                 
                 
                 
