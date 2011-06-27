@@ -39,8 +39,15 @@ Ext.define('kasbon.panel.MainPanel', {
                 }
             }, {
                 text : 'Transaction'
+                
+                
+                
             }, {
                 text : 'Report'
+                
+                
+                
+                
             } ]
         }, {
             xtype : 'panel',
