@@ -1,0 +1,176 @@
+/* 
+    Document   : crud
+    Created on : May 10, 2011, 9:55:12 PM
+    Author     : Anton Raharja
+*/
+
+.crud_grid {
+        background-color: #f0f0f6;
+        padding: 5px 5px 30px 5px;
+}
+
+.crud_table {
+        width: 100%;
+        padding: 1px 0px 1px 0px;
+}
+
+.crud_title {
+        
+}
+
+.crud_th {
+	width: auto;
+        white-space: nowrap;
+        color: #ffffcc;
+        background-color: #8dbdd8;
+}
+
+.crud_td {
+        
+}
+
+.crud_button {
+        background-color: #FF6600;
+        color: #ffffcc;
+        font-weight: bold;
+	width: 70px;
+	height: 26px;
+	display: block;
+        padding-bottom: 10px;
+}
+
+.crud_select {
+        
+}
+
+.crud_checkbox {
+        
+}
+
+.crud_pagination {
+        margin-top: 3px;
+}
+
+/* IDs */
+
+#crud_button_insert {	
+	float: none;
+        margin-left: 2px;
+}
+
+#crud_button_update {
+	padding-right: 5px;
+	float: left;
+}
+
+#crud_button_delete {
+	float: left;
+}
+
+#crud_submit_insert, #crud_submit_update, #crud_submit_delete {
+}
+
+#form_crud_submit {
+	width: 30px;
+	height: 26px;
+	float: right;
+        margin-right: 1px;
+        padding-bottom: 10px;
+}
+
+#form_search_box {
+        float: right;
+        padding-right: 0px;
+        text-align: right;
+}
+
+#form_search_box div {
+        display: inline;
+        margin-right: 5px;
+}
+
+#form_search_box input {
+        display: inline;
+}
+
+#crud_select {
+	float: right;
+	padding-right: 5px;
+}
+
+#crud_pagination {
+	float: left;
+	width: auto;
+}
+
+#crud_th_index {
+	width: 60px;
+}
+
+#crud_td_index {
+        text-align: center;
+}
+
+#crud_th_action {
+	width: 22px;
+}
+
+#crud_td_action {
+        text-align: center;
+}
+
+td {
+}
+
+tr {
+	background-color: #fcfcfc;
+}
+
+tr:hover {
+	background-color: #cfcfcf;
+}
+
+tr.alt {
+	background-color: #f0f0f0;
+}
+
+tr.alt:hover {
+	background-color: #cfcfcf;
+}
+
+table.crud_table thead tr .header {
+	background-image: url(../../../assets/oborci/images/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+
+table.crud_table tbody td {
+}
+
+table.crud_table tbody tr.odd td {
+	background-color: #f0f0f6;
+}
+
+table.crud_table thead tr .headerSortUp {
+	background-image: url(../../../assets/oborci/images/asc.gif);
+}
+
+table.crud_table thead tr .headerSortDown {
+	background-image: url(../../../assets/oborci/images/desc.gif);
+}
+
+table.crud_table thead tr .headerSortDown, table.crud_table thead tr .headerSortUp {
+        background-color: #62b5df;
+}
+
+/* specific to this application */
+
+#crud_grid {
+        width: 760px;
+}
+
+#crud_td_name {
+	white-space: nowrap;
+}
+
