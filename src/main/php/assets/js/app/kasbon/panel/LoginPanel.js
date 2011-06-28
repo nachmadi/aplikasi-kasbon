@@ -65,7 +65,7 @@ Ext.define('kasbon.panel.LoginPanel', {
         onLoginFailure: function(){
                 Ext.MessageBox.alert('Error', 'Invalid login');
                 Ext.getCmp('loginForm').getForm().reset();
-		window.location ='dashboard';
+				window.location ='dashboard';
         }
         
 });
