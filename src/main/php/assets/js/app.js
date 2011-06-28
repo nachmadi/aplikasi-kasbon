@@ -13,7 +13,10 @@ Ext.require([
     'Ext.data.*',
     'Ext.util.*',
     'Ext.state.*',
+    'kasbon.form.pengajuanKasbonForm',
+    'kasbon.panel.pengajuanKasbonPanel',
     'kasbon.toolbar.CrudToolbar',
+    'kasbon.model.pengajuanKasbon',
     'kasbon.panel.CenterPanel',
     'kasbon.panel.MainPanel',
 ]);

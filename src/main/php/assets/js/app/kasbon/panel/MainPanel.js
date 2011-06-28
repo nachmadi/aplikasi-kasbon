@@ -1,9 +1,8 @@
 Ext.define('kasbon.panel.MainPanel', {
     extend : 'Ext.panel.Panel',
     alias : 'widget.kasbon.panel.MainPanel',
-    frame : true,
-    layout : 'border',
-	
+   width : 400,
+ layout : 'border',	
     initComponent : function() {
         this.items = [ {
             xtype : 'toolbar',
@@ -32,7 +31,8 @@ Ext.define('kasbon.panel.MainPanel', {
                         text : 'Master User', 
                         scope : this,
                         handler : function(item){
-                            Ext.getCmp('centerpanel').displayScreen(item.screenType);
+                            Ext.getCmp('centerpanel')
+                            .displayScreen(item.screenType);
                         },
                         screenType : 'kasbon.form.UserForm'
                     },
@@ -47,7 +47,15 @@ Ext.define('kasbon.panel.MainPanel', {
                     xtype : 'menu',
                     plain : true,
                     items : [ {
-                        text : 'Pengajuan Kasbon'                  
+                        xtype : 'menuitem',
+                        text : 'Pengajuan Kasbon',
+                   
+                        screenType: 'kasbon.form.pengajuanKasbonForm',
+                        handler : function(item){
+                            Ext.getCmp('centerpanel')
+                            .displayScreen(item.screenType);
+                        }
+                                   
                     },
                     {
                         text : 'Approval Kasbon'
@@ -69,7 +77,7 @@ Ext.define('kasbon.panel.MainPanel', {
                     items : [ {
                         text : 'Rekap Pengajuan Kasbon'
                         
-                        },{
+                    },{
                         text : 'Rekap Kasbon Per Pegawai'
                     
                     },{
