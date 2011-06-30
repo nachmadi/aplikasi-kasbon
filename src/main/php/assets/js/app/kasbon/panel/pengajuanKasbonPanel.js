@@ -8,20 +8,20 @@ Ext.define('kasbon.panel.pengajuanKasbonPanel', {
     alias : 'widget.kasbon.panel.pengajuanKasbonPanel',
     id : 'kasbon.panel.pengajuanKasbonPanel',
     title: 'Pengajuan Kasbon',
-    width: 721,
-    height: 500,
-    layout: 'border',
+    width: 500,
+    height: 200,
+    
     
     initComponent: function() {
         this.items = 
         {
-            xtype: 'kasbon.form.pengajuanKasbonForm',
-            region: 'center'
+            xtype: 'kasbon.form.pengajuanKasbonForm'
             
-            
-        }
-        ;
-        
+        };
+        this.tbar = {
+            xtype: 'kasbon.toolbar.CrudToolbar'
+           
+        };
        
         kasbon.panel.pengajuanKasbonPanel.superclass.initComponent.call(this);
     }

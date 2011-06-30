@@ -13,11 +13,15 @@ Ext.require([
     'Ext.data.*',
     'Ext.util.*',
     'Ext.state.*',
+    'kasbon.grid.pegawai_grid',
     'kasbon.form.pengajuanKasbonForm',
-    'kasbon.panel.pengajuanKasbonPanel',
+    'kasbon.form.m_pegawaiForm',
     'kasbon.toolbar.CrudToolbar',
     'kasbon.model.pengajuanKasbon',
+    'kasbon.model.m_pegawaiModel',
+    'kasbon.panel.pengajuanKasbonPanel',
     'kasbon.panel.CenterPanel',
+    'kasbon.panel.PegawaiPanel',
     'kasbon.panel.MainPanel',
 ]);
 

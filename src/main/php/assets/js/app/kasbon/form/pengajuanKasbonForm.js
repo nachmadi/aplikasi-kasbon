@@ -7,8 +7,10 @@ Ext.define('kasbon.form.pengajuanKasbonForm', {
     alias: 'widget.kasbon.form.pengajuanKasbonForm',
     title: 'Entry Pengajuan Kasbon',
     id : 'kasbon.form.pengajuanKasbonForm',
-    width: 400,
-    height: 250,
+    width: 500,
+    height: 300,
+    titleCollapse: true,
+collapsible: true,
     padding: 10,
     initComponent: function() {
         Ext.define('model', {
@@ -17,6 +19,7 @@ Ext.define('kasbon.form.pengajuanKasbonForm', {
             {
                 type: 'string',
                 name: 'name'
+                
                 
 
             }
@@ -53,44 +56,48 @@ Ext.define('kasbon.form.pengajuanKasbonForm', {
         {
             xtype: 'textfield',
             fieldLabel: 'Tanggal',
-            anchor: '25%',
-            padding : '5 0 0 0'
+            anchor: '55%',
+            padding: '20 0 0 0',
+            margin: '0 0 0 15'
         },
         {
             xtype: 'combo',
             fieldLabel: 'Pegawai',
-            anchor: '25%',
+            anchor: '55%',
             displayField:'name',
             store: 'comboPengajuanKasbonStore',
             queryMode:'local',
             emptyText: '..: Pilih Pegawai:..',
-            padding : '5 0 0 0'
+            margin: '0 0 0 15',
+            padding: '20 0 0 0'
         },
         {
             xtype: 'textfield',
             fieldLabel: 'Nilai',
-            anchor: '25%',
-            padding : '5 0 0 0'
+            anchor: '55%',
+            margin: '0 0 0 15',
+            padding: '20 0 0 0'
         },
         {
             xtype: 'textfield',
             fieldLabel: 'Keterangan',
-            anchor: '25%',
-            padding : '5 0 0 0'
+            anchor: '55%',
+            margin: '0 0 0 15',
+            padding: '20 0 20 0'
             
         },
         {
             xtype: 'button',
             text: 'Simpan',
-            width: 55,
-            height: 26,
-            margin : '0 5 0 110'
+            width: 80,
+            height: 35,
+            margin : '0 5 0 120'
         },
         {
             xtype: 'button',
             text: 'Batal',
-            height: 26,
-            width: 55
+            width: 56,
+            height: 35
         }
         ];
         kasbon.form.pengajuanKasbonForm.superclass.initComponent.call(this);

@@ -34,7 +34,7 @@ Ext.define('kasbon.panel.MainPanel', {
                             Ext.getCmp('centerpanel')
                             .displayScreen(item.screenType);
                         },
-                        screenType : 'kasbon.form.UserForm'
+                        screenType : 'kasbon.panel.PegawaiPanel'
                     },
                     {
                         text : 'Master Pegawai'
@@ -50,7 +50,7 @@ Ext.define('kasbon.panel.MainPanel', {
                         xtype : 'menuitem',
                         text : 'Pengajuan Kasbon',
                    
-                        screenType: 'kasbon.form.pengajuanKasbonForm',
+                        screenType: 'kasbon.panel.pengajuanKasbonPanel',
                         handler : function(item){
                             Ext.getCmp('centerpanel')
                             .displayScreen(item.screenType);
