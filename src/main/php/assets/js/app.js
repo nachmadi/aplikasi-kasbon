@@ -16,6 +16,7 @@ Ext.require([
     'kasbon.grid.pegawai_grid',
     'kasbon.form.pengajuanKasbonForm',
     'kasbon.form.m_pegawaiForm',
+    'kasbon.form.pelunasanKasbonForm',
     'kasbon.toolbar.CrudToolbar',
     'kasbon.model.pengajuanKasbon',
     'kasbon.model.m_pegawaiModel',
@@ -23,7 +24,8 @@ Ext.require([
     'kasbon.panel.CenterPanel',
     'kasbon.panel.PegawaiPanel',
     'kasbon.panel.MainPanel',
-]);
+    'kasbon.panel.pelunasanKasbonPanel',
+    ]);
 
 // Application's initialization
 Ext.onReady(function() {
@@ -33,7 +35,9 @@ Ext.onReady(function() {
         plain: true,
         closable: false,
         items: [
-            {xtype : 'kasbon.panel.MainPanel'}
+        {
+            xtype : 'kasbon.panel.MainPanel'
+        }
         ]
     });
     win.show();

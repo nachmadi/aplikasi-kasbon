@@ -1,8 +1,8 @@
 Ext.define('kasbon.panel.MainPanel', {
     extend : 'Ext.panel.Panel',
     alias : 'widget.kasbon.panel.MainPanel',
-   width : 400,
- layout : 'border',	
+    width : 400,
+    layout : 'border',	
     initComponent : function() {
         this.items = [ {
             xtype : 'toolbar',
@@ -62,8 +62,15 @@ Ext.define('kasbon.panel.MainPanel', {
                     
                     },{
                         text : 'Pencairan Kasbon'                  
-                    },{
-                        text : 'Pelunasan Kasbon'                  
+                    }, {
+                        xtype : 'menuitem',
+                        text : 'Pelunasan Kasbon',
+                        screenType: 'kasbon.panel.pelunasanKasbonPanel',
+                        handler : function(item){
+                            Ext.getCmp('centerpanel')
+                            .displayScreen(item.screenType);
+                        }
+                                   
                     }]
                 }
                 
