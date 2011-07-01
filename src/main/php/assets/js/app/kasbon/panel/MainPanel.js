@@ -58,7 +58,14 @@ Ext.define('kasbon.panel.MainPanel', {
                                    
                     },
                     {
-                        text : 'Approval Kasbon'
+                        xtype : 'menuitem',
+                        text : 'Approval Kasbon',
+                        screenType: 'kasbon.panel.ApprovalPanel',
+                        handler : function(item){
+                            Ext.getCmp('centerpanel')
+                            .displayScreen(item.screenType);
+                        }
+                        
                     
                     },{
                         text : 'Pencairan Kasbon'                  
@@ -85,8 +92,13 @@ Ext.define('kasbon.panel.MainPanel', {
                         text : 'Rekap Pengajuan Kasbon'
                         
                     },{
-                        text : 'Rekap Kasbon Per Pegawai'
-                    
+                        xtype : 'menuitem',
+                        text : 'Rekap Kasbon Per Pegawai',
+                        screenType: 'kasbon.panel.LaporanKasbonPanel',
+                       handler : function(item){
+                            Ext.getCmp('centerpanel')
+                            .displayScreen(item.screenType);
+                        }
                     },{
                         text : 'Rekap Kasbon Semua Pegawai'                  
                     
