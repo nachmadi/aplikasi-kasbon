@@ -1,9 +1,8 @@
 Ext.define('kasbon.panel.MainPanel', {
     extend : 'Ext.panel.Panel',
     alias : 'widget.kasbon.panel.MainPanel',
-    frame : true,
-    layout : 'border',
-	
+    width : 400,
+    layout : 'border',	
     initComponent : function() {
         this.items = [ {
             xtype : 'toolbar',
@@ -32,9 +31,10 @@ Ext.define('kasbon.panel.MainPanel', {
                         text : 'Master User', 
                         scope : this,
                         handler : function(item){
-                            Ext.getCmp('centerpanel').displayScreen(item.screenType);
+                            Ext.getCmp('centerpanel')
+                            .displayScreen(item.screenType);
                         },
-                        screenType : 'kasbon.form.UserForm'
+                        screenType : 'kasbon.panel.PegawaiPanel'
                     },
                     {
                         text : 'Master Pegawai'
@@ -47,15 +47,46 @@ Ext.define('kasbon.panel.MainPanel', {
                     xtype : 'menu',
                     plain : true,
                     items : [ {
-                        text : 'Pengajuan Kasbon'                  
+                        xtype : 'menuitem',
+                        text : 'Pengajuan Kasbon',
+                   
+                        screenType: 'kasbon.panel.pengajuanKasbonPanel',
+                        handler : function(item){
+                            Ext.getCmp('centerpanel')
+                            .displayScreen(item.screenType);
+                        }
+                                   
                     },
                     {
-                        text : 'Approval Kasbon'
+                        xtype : 'menuitem',
+                        text : 'Approval Kasbon',
+                        screenType: 'kasbon.panel.ApprovalPanel',
+                        handler : function(item){
+                            Ext.getCmp('centerpanel')
+                            .displayScreen(item.screenType);
+                        }
+                        
                     
-                    },{
-                        text : 'Pencairan Kasbon'                  
-                    },{
-                        text : 'Pelunasan Kasbon'                  
+                    },
+                    {
+                        xtype : 'menuitem',
+                        text : 'Pencairan Kasbon',
+                        screenType: 'kasbon.panel.pencairanKasbonPanel',
+                        handler : function(item){
+                            Ext.getCmp('centerpanel')
+                            .displayScreen(item.screenType);
+                        }
+                    //
+                    }
+                    , {
+                        xtype : 'menuitem',
+                        text : 'Pelunasan Kasbon',
+                        screenType: 'kasbon.panel.pelunasanKasbonPanel',
+                        handler : function(item){
+                            Ext.getCmp('centerpanel')
+                            .displayScreen(item.screenType);
+                        }
+                                   
                     }]
                 }
                 
@@ -69,9 +100,14 @@ Ext.define('kasbon.panel.MainPanel', {
                     items : [ {
                         text : 'Rekap Pengajuan Kasbon'
                         
-                        },{
-                        text : 'Rekap Kasbon Per Pegawai'
-                    
+                    },{
+                        xtype : 'menuitem',
+                        text : 'Rekap Kasbon Per Pegawai',
+                        screenType: 'kasbon.panel.LaporanKasbonPanel',
+                       handler : function(item){
+                            Ext.getCmp('centerpanel')
+                            .displayScreen(item.screenType);
+                        }
                     },{
                         text : 'Rekap Kasbon Semua Pegawai'                  
                     

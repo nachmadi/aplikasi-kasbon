@@ -13,10 +13,27 @@ Ext.require([
     'Ext.data.*',
     'Ext.util.*',
     'Ext.state.*',
+    'kasbon.grid.pegawai_grid',
+    'kasbon.grid.ApprovalGrid',
+    'kasbon.grid.LaporanKasbonGrid',
+    'kasbon.form.pengajuanKasbonForm',
+    'kasbon.form.m_pegawaiForm',
+    'kasbon.form.pelunasanKasbonForm',
+    'kasbon.form.pencairanKasbonForm',
     'kasbon.toolbar.CrudToolbar',
+    'kasbon.model.ApprovalModel',
+    'kasbon.model.pengajuanKasbon',
+    'kasbon.model.m_pegawaiModel',
+    'kasbon.model.LaporanKasbonModel',
+    'kasbon.panel.ApprovalPanel',
+    'kasbon.panel.LaporanKasbonPanel',
+    'kasbon.panel.pengajuanKasbonPanel',
+    'kasbon.panel.pencairanKasbonPanel',
     'kasbon.panel.CenterPanel',
+    'kasbon.panel.PegawaiPanel',
     'kasbon.panel.MainPanel',
-]);
+    'kasbon.panel.pelunasanKasbonPanel',
+    ]);
 
 // Application's initialization
 Ext.onReady(function() {
@@ -26,7 +43,9 @@ Ext.onReady(function() {
         plain: true,
         closable: false,
         items: [
-            {xtype : 'kasbon.panel.MainPanel'}
+        {
+            xtype : 'kasbon.panel.MainPanel'
+        }
         ]
     });
     win.show();
